@@ -9,7 +9,7 @@ For the backend, Node.js was used as the primary technology. Node.js is a popula
 
 For the web framework, Express.js was chosen. Express.js is a popular open-source web framework for Node.js that simplifies the process of building web applications. It provides a minimalist approach to web development, allowing developers to build scalable and efficient applications quickly.
 
-For data storage, MongoDB was chosen. MongoDB is a NoSQL document-oriented database that provides high performance, scalability, and flexibility. It allows developers to store and retrieve data in JSON-like documents, making it easy to work with data.
+For data storage, MongoDB was chosen.
 
 ### Authentication and Authorization:
 
@@ -21,10 +21,6 @@ For authentication and authorization, JSON Web Tokens (JWT) were used by me. JWT
 Enter the root directory
 ```
 npm install
-```
-then
-```
-npm preinstall
 ```
 ### Run
 Start the server end in development mode
