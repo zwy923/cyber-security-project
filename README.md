@@ -3,17 +3,15 @@ project
 
 ## Technology selection
 
-### Backend:
-
-For the backend, Node.js was used as the primary technology. Node.js is a popular open-source server-side runtime environment that allows developers to build scalable and high-performance web applications using JavaScript. The reason for choosing Node.js is that it provides a non-blocking I/O model, making it ideal for building fast and scalable web applications. 
-
-For the web framework, Express.js was chosen. Express.js is a popular open-source web framework for Node.js that simplifies the process of building web applications. It provides a minimalist approach to web development, allowing developers to build scalable and efficient applications quickly.
-
-For data storage, MongoDB was chosen.
-
 ### Authentication and Authorization:
 
 For authentication and authorization, JSON Web Tokens (JWT) were used by me. JWT is an open standard for securely transmitting information between parties as a JSON object. It is widely used for authentication and authorization purposes in web applications. 
+
+### Backend:
+
+For the backend, Node.js was used as the primary technology.
+For the web framework, Express.js was chosen. 
+For data storage, MongoDB was chosen.
 
 ## installation guidelines
 
