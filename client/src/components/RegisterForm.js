@@ -128,19 +128,11 @@ const RegistrationForm = () => {
                     type="password"
                     id="password"
                     autoComplete="password"
-                    helperText="Please use strong password combination"
+                    helperText="Please use strong password combination(At least one uppercase letter, lowercase letter, containing numbers and one special character)"
                   />
                 </Grid>
 
-                <Grid item xs={12}>
-                  <TextField onChange={handleroleCodeChange}
-                    fullWidth
-                    name="RoleCode"
-                    label="RoleCode"
-                    type="RoleCode"
-                    id="RoleCode"
-                  />
-                </Grid>
+                
 
                 <Grid item xs={12}>
                   <FormControlLabel

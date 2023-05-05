@@ -14,7 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import { useNavigate } from 'react-router-dom';
-
+import jwtDecode from 'jwt-decode';
 
 const theme = createTheme();
 
@@ -56,9 +56,16 @@ const LoginForm = ({onLoginSuccess}) => {
       });
       const data = await response.json();
       if (response.ok) {
-        setError(<Alert severity="success">successfull, logging in...</Alert>)
+        const decodedToken = jwtDecode(data.token);
+        console.log(decodedToken)
         onLoginSuccess(data.token)
-        navigate('/')
+        setError(<Alert severity="success">You are authenticated, Welcome {decodedToken.name}, Waiting for jump...</Alert>)
+        
+        const navigateToHomePage = () => {
+          navigate('/');
+        }
+      
+        setTimeout(navigateToHomePage, 3000);
       } else {
         setError(<Alert severity="error">{data.error}</Alert>);
       }

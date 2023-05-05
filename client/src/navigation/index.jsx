@@ -12,6 +12,7 @@ import EditPage from '../components/EditPage';
 
 const Navigation = () => {
   // Get token from local storage and set it to state
+  
   const [token, setToken] = useState(localStorage.getItem('authToken'));
 
   if(token){
@@ -26,6 +27,7 @@ const Navigation = () => {
 
   // Check for local token on mount and set it to state
   useEffect(() => {
+    localStorage.removeItem('authToken')
     const localToken = localStorage.getItem('authToken');
     if (localToken) {
       setToken(localToken);
@@ -57,7 +59,7 @@ const Navigation = () => {
         <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer title="*-*" description="code communication" />
+      <Footer title="*-*" description="" />
     </Router>
   );
 };
